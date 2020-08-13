@@ -31,7 +31,7 @@ Partial Class Form1
         '
         'CalculateButton
         '
-        Me.CalculateButton.Location = New System.Drawing.Point(274, 60)
+        Me.CalculateButton.Location = New System.Drawing.Point(246, 60)
         Me.CalculateButton.Name = "CalculateButton"
         Me.CalculateButton.Size = New System.Drawing.Size(75, 23)
         Me.CalculateButton.TabIndex = 0
@@ -42,7 +42,7 @@ Partial Class Form1
         '
         Me.FormulaLabel.AutoSize = True
         Me.FormulaLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FormulaLabel.Location = New System.Drawing.Point(24, 60)
+        Me.FormulaLabel.Location = New System.Drawing.Point(37, 60)
         Me.FormulaLabel.Name = "FormulaLabel"
         Me.FormulaLabel.Size = New System.Drawing.Size(51, 17)
         Me.FormulaLabel.TabIndex = 1
@@ -62,7 +62,7 @@ Partial Class Form1
         '
         Me.ResultValueLabel.AutoSize = True
         Me.ResultValueLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ResultValueLabel.Location = New System.Drawing.Point(137, 98)
+        Me.ResultValueLabel.Location = New System.Drawing.Point(117, 98)
         Me.ResultValueLabel.Name = "ResultValueLabel"
         Me.ResultValueLabel.Size = New System.Drawing.Size(17, 17)
         Me.ResultValueLabel.TabIndex = 3
@@ -70,7 +70,7 @@ Partial Class Form1
         '
         'FormulaTextBox
         '
-        Me.FormulaTextBox.Location = New System.Drawing.Point(140, 60)
+        Me.FormulaTextBox.Location = New System.Drawing.Point(120, 60)
         Me.FormulaTextBox.Name = "FormulaTextBox"
         Me.FormulaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.FormulaTextBox.TabIndex = 4
@@ -79,7 +79,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(361, 141)
+        Me.ClientSize = New System.Drawing.Size(333, 141)
         Me.Controls.Add(Me.FormulaTextBox)
         Me.Controls.Add(Me.ResultValueLabel)
         Me.Controls.Add(Me.ResultLabel)
