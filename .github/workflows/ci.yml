@@ -18,9 +18,28 @@ jobs:
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.0.1
       - name: Build
-        run: msbuild Anwendungsentwicklung_WI17_Dre.sln
+        run: msbuild Anwendungsentwicklung_WI17_Dre.sln /t:Build /p:Configuration=Release
       - name: Upload
         uses: actions/upload-artifact@v2
         with:
-          name: debug
-          path: Anwendungsentwicklung_WI17_Dre/bin/Debug/
+          name: release
+          path: Anwendungsentwicklung_WI17_Dre/bin/Release/
+  deploy:
+    if: startsWith(github.ref, 'refs/tags/')
+    name: Deploy to GitHub Releases
+    needs: [ build ]
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Prepare
+        run: |
+          mkdir -p staging/KursB_GenzRobin
+          rsync -r --exclude=.github --exclude=.gitignore --exclude=README.md ./* staging/KursB_GenzRobin
+          cd staging && zip -r ../KursB_GenzRobin.zip .
+      - name: Deploy
+        uses: softprops/action-gh-release@v1
+        with:
+          files: KursB_GenzRobin.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
