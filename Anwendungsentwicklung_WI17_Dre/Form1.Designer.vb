@@ -64,9 +64,8 @@ Partial Class Form1
         Me.ResultValueLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ResultValueLabel.Location = New System.Drawing.Point(117, 98)
         Me.ResultValueLabel.Name = "ResultValueLabel"
-        Me.ResultValueLabel.Size = New System.Drawing.Size(17, 17)
+        Me.ResultValueLabel.Size = New System.Drawing.Size(0, 17)
         Me.ResultValueLabel.TabIndex = 3
-        Me.ResultValueLabel.Text = "0"
         '
         'FormulaTextBox
         '
