@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - '*'
+  pull_request:
+
+jobs:
+  build:
+    name: Build solution
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.0.1
+      - name: Build
+        run: msbuild Anwendungsentwicklung_WI17_Dre.sln
+      - name: Upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: debug
+          path: Anwendungsentwicklung_WI17_Dre/bin/Debug/
