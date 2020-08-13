@@ -26,6 +26,7 @@ Partial Class Form1
         Me.FormulaLabel = New System.Windows.Forms.Label()
         Me.ResultLabel = New System.Windows.Forms.Label()
         Me.ResultValueLabel = New System.Windows.Forms.Label()
+        Me.FormulaTextBox = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'CalculateButton
@@ -67,11 +68,19 @@ Partial Class Form1
         Me.ResultValueLabel.TabIndex = 3
         Me.ResultValueLabel.Text = "0"
         '
+        'FormulaTextBox
+        '
+        Me.FormulaTextBox.Location = New System.Drawing.Point(140, 60)
+        Me.FormulaTextBox.Name = "FormulaTextBox"
+        Me.FormulaTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.FormulaTextBox.TabIndex = 4
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(361, 141)
+        Me.Controls.Add(Me.FormulaTextBox)
         Me.Controls.Add(Me.ResultValueLabel)
         Me.Controls.Add(Me.ResultLabel)
         Me.Controls.Add(Me.FormulaLabel)
@@ -90,4 +99,5 @@ Partial Class Form1
     Friend WithEvents FormulaLabel As Label
     Friend WithEvents ResultLabel As Label
     Friend WithEvents ResultValueLabel As Label
+    Friend WithEvents FormulaTextBox As TextBox
 End Class
