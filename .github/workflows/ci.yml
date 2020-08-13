@@ -32,14 +32,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Download
+        uses: actions/download-artifact@v2
+        with:
+          path: artifacts
       - name: Prepare
         run: |
           mkdir -p staging/KursB_GenzRobin
-          rsync -r --exclude=.github --exclude=.gitignore --exclude=README.md ./* staging/KursB_GenzRobin
-          cd staging && zip -r ../KursB_GenzRobin.zip .
+          mkdir -p staging/Binaries
+          rsync -r --exclude=artifacts --exclude=staging --exclude=.github --exclude=.gitignore --exclude=README.md ./* staging/KursB_GenzRobin
+          mv artifacts/release/* staging/Binaries/
+          cd staging && zip -r ../KursB_GenzRobin.zip KursB_GenzRobin && zip -r ../Binaries.zip Binaries
       - name: Deploy
         uses: softprops/action-gh-release@v1
         with:
-          files: KursB_GenzRobin.zip
+          files: |
+            KursB_GenzRobin.zip
+            Binaries.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
