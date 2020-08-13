@@ -22,13 +22,24 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.Rechne = New System.Windows.Forms.Button()
         Me.SuspendLayout()
+        '
+        'Rechne
+        '
+        Me.Rechne.Location = New System.Drawing.Point(274, 60)
+        Me.Rechne.Name = "Rechne"
+        Me.Rechne.Size = New System.Drawing.Size(75, 23)
+        Me.Rechne.TabIndex = 0
+        Me.Rechne.Text = "Rechne"
+        Me.Rechne.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(361, 141)
+        Me.Controls.Add(Me.Rechne)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.Name = "Form1"
@@ -37,4 +48,6 @@ Partial Class Form1
         Me.ResumeLayout(False)
 
     End Sub
+
+    Friend WithEvents Rechne As Button
 End Class
