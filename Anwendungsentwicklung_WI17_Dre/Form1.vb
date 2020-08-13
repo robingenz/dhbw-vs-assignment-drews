@@ -1,5 +1,5 @@
 ﻿Public Class Form1
-    Private Sub Rechne_Click(sender As Object, e As EventArgs) Handles Rechne.Click
+    Private Sub CalculateButton_Click(sender As Object, e As EventArgs) Handles CalculateButton.Click
 
     End Sub
 End Class

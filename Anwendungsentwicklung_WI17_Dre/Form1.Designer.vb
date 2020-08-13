@@ -22,20 +22,20 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Rechne = New System.Windows.Forms.Button()
+        Me.CalculateButton = New System.Windows.Forms.Button()
         Me.FormulaLabel = New System.Windows.Forms.Label()
         Me.ResultLabel = New System.Windows.Forms.Label()
         Me.ResultValueLabel = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'Rechne
+        'CalculateButton
         '
-        Me.Rechne.Location = New System.Drawing.Point(274, 60)
-        Me.Rechne.Name = "Rechne"
-        Me.Rechne.Size = New System.Drawing.Size(75, 23)
-        Me.Rechne.TabIndex = 0
-        Me.Rechne.Text = "Rechne"
-        Me.Rechne.UseVisualStyleBackColor = True
+        Me.CalculateButton.Location = New System.Drawing.Point(274, 60)
+        Me.CalculateButton.Name = "CalculateButton"
+        Me.CalculateButton.Size = New System.Drawing.Size(75, 23)
+        Me.CalculateButton.TabIndex = 0
+        Me.CalculateButton.Text = "Rechne"
+        Me.CalculateButton.UseVisualStyleBackColor = True
         '
         'FormulaLabel
         '
@@ -75,7 +75,7 @@ Partial Class Form1
         Me.Controls.Add(Me.ResultValueLabel)
         Me.Controls.Add(Me.ResultLabel)
         Me.Controls.Add(Me.FormulaLabel)
-        Me.Controls.Add(Me.Rechne)
+        Me.Controls.Add(Me.CalculateButton)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.Name = "Form1"
@@ -86,7 +86,7 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents Rechne As Button
+    Friend WithEvents CalculateButton As Button
     Friend WithEvents FormulaLabel As Label
     Friend WithEvents ResultLabel As Label
     Friend WithEvents ResultValueLabel As Label
