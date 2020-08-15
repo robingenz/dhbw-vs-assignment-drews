@@ -28,11 +28,15 @@
         For I = 0 To FormulaWithoutWhitespaces.Length - 1
             Dim CurrentChar = FormulaWithoutWhitespaces.Substring(I, 1)
             If I = 0 Then
+                ' The first character (should be a number) is added
                 Result = Result + Convert.ToInt32(CurrentChar)
             ElseIf I Mod 2 <> 0 Then
+                ' Any character in an odd position should be an operator
                 If CurrentChar <> "+" And CurrentChar <> "-" Then Throw New InvalidOperationException()
                 Continue For
             ElseIf I Mod 2 = 0 Then
+                ' Every character in an even position should be an operand
+                ' Get last operator
                 Dim LastChar = FormulaWithoutWhitespaces.Substring(I - 1, 1)
                 If LastChar = "+" Then
                     Result = Result + Convert.ToInt32(CurrentChar)
