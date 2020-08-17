@@ -50,7 +50,7 @@
         Return Result
     End Function
 
-    Function RemoveWhitespaces(str As String) As String
+    Private Function RemoveWhitespaces(str As String) As String
         Return New String(str.Where(Function(x) Not Char.IsWhiteSpace(x)).ToArray())
     End Function
 End Class
