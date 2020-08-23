@@ -1,4 +1,4 @@
-# dhbw-assignment-drews
+# dhbw-vs-assignment-drews
 
 [![ci](https://github.com/robingenz/dhbw-assignment-drews/workflows/CI/badge.svg?branch=master)](https://github.com/robingenz/dhbw-assignment-drews/actions?query=workflow%3ACI)
 
