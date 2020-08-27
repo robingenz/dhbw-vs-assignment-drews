@@ -1,14 +1,11 @@
 ﻿Public Class Form1
     Private Sub CalculateButton_Click(sender As Object, e As EventArgs) Handles CalculateButton.Click
-        Dim Result As Integer
-
         Try
-            Result = Me.CalculateFormula(FormulaTextBox.Text)
+            Dim Result = Me.CalculateFormula(FormulaTextBox.Text)
             ResultValueLabel.Text = Result
         Catch
             MessageBox.Show("Bitte geben sie eine Formel ein. Erlaubt sind einziffrige Operanden, Leerzeichen und die Operatoren Plus und Minus. Außerdem kann das letzte Zeichen ein Gleichheitszeichen sein.", "Invalide Eingabe", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End Try
-
     End Sub
 
     Private Function CalculateFormula(Formula As String) As Integer
